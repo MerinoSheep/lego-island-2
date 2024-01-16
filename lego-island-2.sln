@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "injector", "injector\injector.vcxproj", "{6651C71F-0306-48A3-9621-C570289FC5B7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lego-hacks", "lego-hacks\lego-hacks.vcxproj", "{593A343E-8F32-4791-9559-4094AD12AEE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Debug|x64.ActiveCfg = Debug|x64
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Debug|x64.Build.0 = Debug|x64
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Debug|x86.ActiveCfg = Debug|Win32
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Debug|x86.Build.0 = Debug|Win32
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Release|x64.ActiveCfg = Release|x64
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Release|x64.Build.0 = Release|x64
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Release|x86.ActiveCfg = Release|Win32
+		{6651C71F-0306-48A3-9621-C570289FC5B7}.Release|x86.Build.0 = Release|Win32
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Debug|x64.ActiveCfg = Debug|x64
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Debug|x64.Build.0 = Debug|x64
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Debug|x86.ActiveCfg = Debug|Win32
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Debug|x86.Build.0 = Debug|Win32
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Release|x64.ActiveCfg = Release|x64
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Release|x64.Build.0 = Release|x64
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Release|x86.ActiveCfg = Release|Win32
+		{593A343E-8F32-4791-9559-4094AD12AEE3}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69041EB2-E7C7-478D-94F9-084595727BFA}
+	EndGlobalSection
+EndGlobal
