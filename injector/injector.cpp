@@ -6,38 +6,6 @@
 #include <Windows.h>
 #include <TlHelp32.h>
 
-char DLL_PATH[] = "C:\\Users\\bizom\\source\\repos\\lego-hacks\\Debug\\lego-hacks.dll";
-BOOL InjectDLL(DWORD pid)
-{
-
-	HANDLE procHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
-	if (!procHandle) {
-		std::cerr << "Couldn't open process!" << std::endl;
-		return 0;
-	}
-	LPVOID baseAdress = VirtualAllocEx(procHandle, NULL, strlen(DLL_PATH) + 1, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
-	if (!baseAdress) {
-		std::cerr << "VirtualALlocEx failed" << std::endl;
-		return 0;
-
-	}
-	LPVOID loadLibrary = GetProcAddress(GetModuleHandle(L"kernel32.dll"), "LoadLibraryA");
-	if (!loadLibrary) {
-		std::cerr << "GetProcAddress failed" << std::endl;
-		return 0;
-
-	}
-	WriteProcessMemory(procHandle, baseAdress, DLL_PATH, strlen(DLL_PATH) + 1, NULL);
-	HANDLE remoteThread = CreateRemoteThread(procHandle, NULL, 0, (LPTHREAD_START_ROUTINE)loadLibrary, baseAdress, 0, NULL);
-	if (!remoteThread) {
-		std::cerr << "CreateRemoteThread failed" << std::endl;
-		return 0;
-
-	}
-	//CloseHandle(procHandle);
-	return 1;
-}
-
 DWORD FindUIThread(DWORD pid) {
 	HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, 0);
 
@@ -67,7 +35,7 @@ DWORD FindUIThread(DWORD pid) {
 int main(int argc, char* argv[]) {
 	DWORD pid = getPid();
 	std::cout << "Injecting DLL" << std::endl;
-	HMODULE hDll = LoadLibrary(L"C:\\Users\\bizom\\source\\repos\\injector\\Debug\\lego-hacks.dll");
+	HMODULE hDll = LoadLibrary(L"lego-hacks.dll");
 	if (!hDll) {
 		std::cout << "Loading Library Failed" << std::endl;
 		return 1;

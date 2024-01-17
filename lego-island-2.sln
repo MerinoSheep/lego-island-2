@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "injector", "injector\injector.vcxproj", "{6651C71F-0306-48A3-9621-C570289FC5B7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{593A343E-8F32-4791-9559-4094AD12AEE3} = {593A343E-8F32-4791-9559-4094AD12AEE3}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lego-hacks", "lego-hacks\lego-hacks.vcxproj", "{593A343E-8F32-4791-9559-4094AD12AEE3}"
 EndProject
